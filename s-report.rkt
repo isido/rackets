@@ -5,7 +5,8 @@
 ;; A simple script for parsing S Group purchase reports
 ;; probably useful only in Finland
 ;;
-;; (C) 2014 Ilja Sidoroff, this file is placed in public domain.
+;; Written by Ilja Sidoroff, this file is unencumbered and placed in
+;; public domain.
 ;;
 
 (require 2htdp/batch-io)
