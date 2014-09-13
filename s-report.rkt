@@ -51,7 +51,11 @@
     (printf "~a,~a\n" item price)))
 
 (define main
-  (let ([fn (command-line
-             #:args (filename)
-             filename)])
-    (print-hash (process-file fn))))
+  (let* ([filenames (command-line
+                     #:args filenames
+                     filenames)]
+         [files (if (empty? filenames)
+                    (list 'stdin)
+                    filenames)])
+    (for ([file files])
+      (print-hash (process-file file)))))
